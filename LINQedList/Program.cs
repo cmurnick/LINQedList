@@ -56,7 +56,22 @@ namespace LINQedList
                 Console.WriteLine(name);
             }
             Console.ReadLine();
-                
+
+            // Build a collection of these numbers sorted in ascending order
+            List<int> numbers2 = new List<int>()
+            {
+                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            };
+
+            var ascending = from number in numbers2
+                            orderby number
+                            select number;
+
+            foreach(var number in ascending)
+            {
+                Console.WriteLine(number);
+            }
+            Console.ReadLine();
         }
     }
 }
